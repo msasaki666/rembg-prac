@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: rembg-prac
+    volumes:
+      - .:/rembg-prac:cached
+      - ${HOME}/.u2net:/root/.u2net
+    command: tail -f /dev/null
+    ports:
+      - 3000:5000
